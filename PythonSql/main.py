@@ -3,6 +3,8 @@ import pandas as pd
 import tkinter as tk
 from tkinter import messagebox
 
+#tk.Button(root, text='Bảng thông tin sinh viên', command= lambda: display_student_data(), width=30, height=2).grid(row=9, column=0)
+
 
 server='DESKTOP-HRTE7HR\\SQLEXPRESS'
 database ='QUANLYSINHVIEN'
