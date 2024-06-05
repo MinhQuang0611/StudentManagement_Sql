@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 60px;
+    /* Để tránh footer che nội dung */
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Courgette', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+}
+
+#features ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#models .model {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#models img {
+    max-width: 150px;
+    margin-right: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#image {
+    max-width: 90%;
+    /* Giới hạn kích thước tối đa là 70% chiều rộng của phần tử mẹ */
+    height: auto;
+    /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+    display: block;
+    /* Đảm bảo hiển thị đúng trên mọi trình duyệt */
+    object-fit: cover;
+    /* Đảm bảo ảnh được căn giữa và giữ tỷ lệ */
+    margin: auto;
+    /* Căn giữa theo chiều ngang */
+}
+
+#myVideo {
+    width: 80%;
+    /* Độ rộng của video */
+    height: auto;
+    /* Chiều cao tự động để giữ tỷ lệ khung hình */
+    border: 1px solid #ccc;
+    /* Viền của video */
+    padding: 10px;
+    /* Khoảng cách bên trong video */
+    background-color: #f0f0f0;
+    /* Màu nền của video */
+    margin: auto;
+    display: block;
+}
+
+.container {
+    width: 80%;
+}
+
+.swiper {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.swiper-slide {
+    position: relative;
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 1s;
+    user-select: none;
+    border: 2px solid #ccc;
+}
+
+.swiper-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    z-index: 1;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.swiper-slide p {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 2px;
+    z-index: 2;
+    opacity: 0;
+    transform: rotate(360deg) scale(0);
+    transition: 0.8s;
+}
+
+.swiper-slide-active {
+    position: relative;
+    transition: 1s;
+}
+
+.swiper-slide-active::after {
+    background: rgba(123, 123, 123, 0.4);
+}
+
+.swiper-slide-active p {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+}
+
+.swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.6s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+    width: 32px;
+    background-color: #ffffff;
+    border-radius: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+.swiper-pagination {
+    display: none;
+}
